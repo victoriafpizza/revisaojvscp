@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    "DOM"
+
+    // é um modelo de doc carregado pelo navegador
+    //  este doc é representado atravez de uma arvore de nós
+    // cad um desses nós representa uma parte do documento
+    // o dom define um padrão para acessar doc html
+    
+    // o dome uma das apis mais usadas na web, pq ele permite que cada codigo rolando no nav acesse enterajea com cada nó
+    // os nós podem ser adicionados aos nós para serem disparados quanso um dado evento acontecer
+    
+    // podemos acesasr e manipular as informações as informações e atributos dos nossos elementos html pelo id 
+    // pela classe, pelo name e pelo nome da tag.
+    // sendo que a opção mais usada é pelo ID (por ser unico)
+    // os demais usamos quando queremos percorrer ou coletar varias informações
+    
+    "usando id"
+    
+    // para acessarmos o id usamos a sintaxe
+    
+    document.getElementsById("nome").innerHTML = "Victoria"
+    
+    // document se refere a pagina html;
+    // getElementById() recupera um elemneto pelo seu ID;
+    // innerHTML utilizamos para alterar/inserir o conteudo do elemeneto (tag) de marcação
+    
+    // 
+
+    <h1 id="titulo">exemplo por id</h1>
+
+    nome: <input type="text" name="" id="idNome">
+    <button onclick="mudar()"> CLIQUE AQUI </button>
+
+    <h2>ex por classname </h2>
+
+    <p>primeiro: <span class="corredor"></span></p>
+    <p>segundo: <span class="corredor"></span></p>
+    <p>terceiro: <span class="corredor"></span></p>
+    <br>
+
+    novo classificad: <input type="text" id="novo"> <br>
+    posição: <input type="number" id="posição" min="1" max="3">
+    <button onclick="inserir()"> inserir </button>
+
+    <script>
+        function inserir(){
+            let numero = document.getElementById("posição").value -1
+            let novo = document.getElementById("novo").value
+            document.getElementByClassName("corredor")[numero].innerHTML = novo
+        }
+    </script>
+
+    <!-- usando o tagname: assim como o name, podemos acessar elementos pelo nome da tag se precisarmos retornar uma coleção
+    de elementos dessa tag -->
+
+    <h3> exemplo por TagName </h3>
+
+    <ul>
+        <li> Janeiro </li>
+        <li> Fevereiro </li>
+        <li> Março </li>
+        <li> Abril </li>
+        <li> Maio </li>
+    </ul>
+
+    Escolha um mes: <input type="numer" id="numero" min="1" max="5">
+    <button onclick="mostrar()"> mostrar </button>
+    <p> mes escolhido: <span id="resultado"> </span></p>
+
+    <script>
+        function mostrar(){
+            let num = document.getElementById("numero").value -1
+            let mes = document.getElementsByTagName(li)[num].innerHTML;
+            document.getElementById("resultado").innerHTML = mes
+        }
+
+    // tambem temos outra forma de selecionar os elementos da pagina, podemos usar o querySelector()
+    // ele recebe um seletor CSS para achar o elemento
+
+    document.querySelector("#nome")
+    // obs: ele so retorna a primeira ocorrencia
+
+    // quando temos que pegar um elemento pela classe ou tag e definir qual das ocorrencias queremos
+    // no caso de mais de uma, podemos usar o querySelctor()
+
+    document.querySelectorAll(".btn")[0]
+
+    // aqui usamos os colcheter para colocar a posição que quermos selecionar
+    </script>
+
+    <script>
+document.getElementsByTagName("li")[0].value
+
+// document se refere a pagina HTML
+// ELBTN recupera um elemento pelo nome da tag especificado pela sua posição, começando por 0
+// value retorna o valor "conteudo do elemento"
+"usando id"
+    
+    // para acessarmos o id usamos a sintaxe
+    
+    document.getElementsById("nome").innerHTML = "Victoria"
+
+
+        let novo = document.getElementById("idNome")
+
+        function mudar(){
+            document.getElementById("titulo").innerHTML = novo.value
+        }
+
+
+// usando a classe: acessamos utilizando a clase quando precisamos retornas uma coleçao de elementos com uma mesma classe
+
+document.getElementsByClassName("noticia")[0].value
+
+// document se refere a pagina html
+// getElementByTagName("classe")[0] recupera um elemento com a classe especificada pela sua posição, começando por "0"
+// value retorna o valor "conteudo" do elemento
+
+
+    </script>
+    
+</body>
+</html>

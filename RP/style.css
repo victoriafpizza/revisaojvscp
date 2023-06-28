@@ -1,0 +1,26 @@
+body{
+    background-color:blue ;
+}
+
+
+
+h2{
+    color: red;
+
+}
+
+#titulo{
+    color: pink;
+}
+
+#class{
+
+    color: red;
+    background-color: aquamarine;
+    border: solid red;
+}
+#nome{
+    color:pink;
+    background-color: blue;
+
+    }
